@@ -93,12 +93,6 @@ print(f'\tPandas = {pd.__version__}')
 print(f'\tSeaborn = {sns.__version__}')
 ```
 
-    - Package Versions:
-    	Matplotlib = 3.3.1
-    	Pandas = 1.1.3
-    	Seaborn = 0.11.0
-
-
 
 ```python
 ## From https://github.com/learn-co-curriculum/dsc-regression-boston-lab
@@ -112,148 +106,6 @@ df = pd.read_csv('https://raw.githubusercontent.com/learn-co-curriculum/dsc-regr
 display(df.head())
 df.info()
 ```
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>LotArea</th>
-      <th>BldgType</th>
-      <th>OverallQual</th>
-      <th>OverallCond</th>
-      <th>YearBuilt</th>
-      <th>YearRemodAdd</th>
-      <th>GrLivArea</th>
-      <th>FullBath</th>
-      <th>TotRmsAbvGrd</th>
-      <th>Fireplaces</th>
-      <th>MoSold</th>
-      <th>YrSold</th>
-      <th>SalePrice</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>8450</td>
-      <td>1Fam</td>
-      <td>7</td>
-      <td>5</td>
-      <td>2003</td>
-      <td>2003</td>
-      <td>1710</td>
-      <td>2</td>
-      <td>8</td>
-      <td>0</td>
-      <td>2</td>
-      <td>2008</td>
-      <td>208500</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>9600</td>
-      <td>1Fam</td>
-      <td>6</td>
-      <td>8</td>
-      <td>1976</td>
-      <td>1976</td>
-      <td>1262</td>
-      <td>2</td>
-      <td>6</td>
-      <td>1</td>
-      <td>5</td>
-      <td>2007</td>
-      <td>181500</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>11250</td>
-      <td>1Fam</td>
-      <td>7</td>
-      <td>5</td>
-      <td>2001</td>
-      <td>2002</td>
-      <td>1786</td>
-      <td>2</td>
-      <td>6</td>
-      <td>1</td>
-      <td>9</td>
-      <td>2008</td>
-      <td>223500</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>9550</td>
-      <td>1Fam</td>
-      <td>7</td>
-      <td>5</td>
-      <td>1915</td>
-      <td>1970</td>
-      <td>1717</td>
-      <td>1</td>
-      <td>7</td>
-      <td>1</td>
-      <td>2</td>
-      <td>2006</td>
-      <td>140000</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>14260</td>
-      <td>1Fam</td>
-      <td>8</td>
-      <td>5</td>
-      <td>2000</td>
-      <td>2000</td>
-      <td>2198</td>
-      <td>2</td>
-      <td>9</td>
-      <td>1</td>
-      <td>12</td>
-      <td>2008</td>
-      <td>250000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-    <class 'pandas.core.frame.DataFrame'>
-    RangeIndex: 1460 entries, 0 to 1459
-    Data columns (total 13 columns):
-     #   Column        Non-Null Count  Dtype 
-    ---  ------        --------------  ----- 
-     0   LotArea       1460 non-null   int64 
-     1   BldgType      1460 non-null   object
-     2   OverallQual   1460 non-null   int64 
-     3   OverallCond   1460 non-null   int64 
-     4   YearBuilt     1460 non-null   int64 
-     5   YearRemodAdd  1460 non-null   int64 
-     6   GrLivArea     1460 non-null   int64 
-     7   FullBath      1460 non-null   int64 
-     8   TotRmsAbvGrd  1460 non-null   int64 
-     9   Fireplaces    1460 non-null   int64 
-     10  MoSold        1460 non-null   int64 
-     11  YrSold        1460 non-null   int64 
-     12  SalePrice     1460 non-null   int64 
-    dtypes: int64(12), object(1)
-    memory usage: 148.4+ KB
-
 
 # The Many Ways of Making a Figure in Python
 
@@ -327,26 +179,6 @@ df.info()
 
 >- ***So... what are "object-oriented-methods" anyway?***
 
-### Anatomy of a Matplotlib Figure
-
-
-
-<center><img src="https://raw.githubusercontent.com/jirvingphd/fsds_100719_cohort_notes/master/images/matplotlib_anatomy.png" width=400></center>
-
-- Matplotlib Figures are composed of 3 different types of objects:
-    - `Figure` is the largest bucket and contains everything else. It is like a picture frame without any actual images in it.
-  - `Axes` are the actual plot / image inside of the Figure / frame. 
-        - this is the same `ax` as in `fig, ax = plt.subplots()` and that is returned when you create a Pandas or Seaborn figure.
-        - There is an 'Axes` for each subplot in the Figure
-
-        
-
-
-```python
-## Make an empty figure and ax with plt.subplots
-
-```
-
 ### OOP Crash Course
 
 - **Object-Oriented Programming (OOP):**
@@ -375,15 +207,29 @@ df.info()
 - You will learn about classes in Phase 3.
         
 
+### Anatomy of a Matplotlib Figure
+
+
+
+<center><img src="https://raw.githubusercontent.com/jirvingphd/fsds_100719_cohort_notes/master/images/matplotlib_anatomy.png" width=400></center>
+
+- Matplotlib Figures are composed of 3 different types of objects:
+    - `Figure` is the largest bucket and contains everything else. It is like a picture frame without any actual images in it.
+  - `Axes` are the actual plot / image inside of the Figure / frame. 
+        - this is the same `ax` as in `fig, ax = plt.subplots()` and that is returned when you create a Pandas or Seaborn figure.
+        - There is an 'Axes` for each subplot in the Figure
+
+        
+
 
 ```python
-## Run help on fig 
+## Make an empty figure and ax with plt.subplots
 
 ```
 
 
 ```python
-# Run help on ax
+## Run help on fig 
 
 ```
 
@@ -395,6 +241,12 @@ df.info()
     
 - However, axes do NOT actually contain the VISUAL for the figure, just the information.
   
+
+
+```python
+# Run help on ax
+
+```
 
 #### Now, let's make our figure with Method 02
 
@@ -499,15 +351,113 @@ df.info()
 ```
 
 ### Customizing Xtick Label Formatting
-- https://matplotlib.org/stable/gallery/pyplots/dollar_ticks.html?highlight=tick
+
+#### Adding "\$" and "," thousands separator  
+
+- [Tick Formatters Examples](https://matplotlib.org/stable/gallery/ticks_and_spines/tick-formatters.html)
+    - [**Reference: String Format Codes**](https://mkaz.blog/code/python-string-format-cookbook/)
+- [Tick Locator Examples](https://matplotlib.org/stable/gallery/ticks_and_spines/tick-locators.html)
+
+
 - Let's make our price ticks look more professional
     - Add $'s 
     - Add , separator for thousands
     - Show 2 decimal places
+    
+- [Tutorial Example](https://matplotlib.org/stable/gallery/pyplots/dollar_ticks.html?highlight=tick)
+
+
+```python
+from matplotlib.ticker import StrMethodFormatter
+## Make a larger fig/ax before plotting
+
+
+
+## Make price_fmt using the StrMethodFormatter and the appropriate format code 
+
+## Set the major formatter for the xaxis
+```
+
+#### How to Suppress Warning Messages
+
+- While the pink warnings above are not an error, they are **ugly**
+- You can turn off warning messages, but **you should only do this for the final version of a project notebook.**
+
+- To prevent warnings from appearing, we can run the following code:
+
+```python
+import warnings
+warnings.filterwarnings('ignore')
+```
+
+
+```python
+import warnings
+
+```
+
+#### Converting "\\$700,000" Dollars to "\\$700K"
+
+- Example: How to use the FuncFormatter to convert \\$'s to millions of \\$'s.
+- To use the Function Formatter:
+    - Create a function that accepts 2 arguments: `x` and `pos`
+    - Use f-strings and format codes to specify how to change x. 
+    - e.g. `f"${x*1e-6:,}M"` would convert "2,000,000" -> "$2M"
+
+
+```python
+from matplotlib.ticker import FuncFormatter
+
+def millions(x,pos):
+    """function for use wth matplotlib FuncFormatter -  formats money in millions"""
+    return f"${x*1e-6:,}M"
+
+# Create the formatter
+price_fmt_mill =FuncFormatter(millions)
+
+## Make the scatter plot
+ax = df.plot(kind='scatter',y='Profit',x='Budget')
+
+## Set the axis' major formatter
+ax.yaxis.set_major_formatter(price_fmt_mill)
+```
+<!--
+```python
+def billions(x,pos):
+    """function for use wth matplotlib FuncFormatter -  formats money in billions"""
+    return f"$ {x*1e-9:,}B"
+
+
+def get_funcformatter(kind='m'):
+    """Returns a matplotlib FuncFormatter for formatting currecny in millions or billions
+    
+    Args:
+        kind (str): which order of magnitude to use. Default is 'm'. 
+                    m=Millions, b=Billions
+    """
+    if kind.lower()=='m':
+        func = millions
+    elif kind.lower()=='b':
+        func = billions
+    return FuncFormatter(func)
+```
+-->
+
+
+```python
+from matplotlib.ticker import FuncFormatter
+## Make a "hundred_thousands" function 
+
+```
 
 
 ```python
 ## Make a larger fig/ax before plotting
+
+
+
+## Create price_fmt_thous using the  FuncFormatter and our function
+
 
 ```
 
