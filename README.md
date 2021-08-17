@@ -37,6 +37,7 @@
     - [The Data Viz Project](https://datavizproject.com/)
 
     - [Blog Post: How to Choose a Chart Type](https://towardsdatascience.com/data-visualization-101-how-to-choose-a-chart-type-9b8830e558d6)
+    - [Python Graph Gallery](https://www.python-graph-gallery.com/)
 
 
 
@@ -45,7 +46,7 @@
 Let's explore the Python-specific options available to us. 
 
 
-- https://www.python-graph-gallery.com/
+
 - [Matplotlib Example Gallery](https://matplotlib.org/gallery/index.html#examples-index) 
 - [Seaborn Example Gallery](https://seaborn.pydata.org/examples/index.html)
 - [Pandas Visualization docs](https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html)
